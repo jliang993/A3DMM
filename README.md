@@ -44,7 +44,6 @@ $$
 
 ## Affine constrained minimisation
 
-
 Consider the following constrained problem
 $$
 \min_{x \in \mathbb{R}^{n} } ~ R(x)    \quad
@@ -67,10 +66,11 @@ Here $K$ is generated from the standard Gaussian ensemble, and the following thr
 * **Nuclear norm** $(m, n)=(1448, 4096)$, solution $x^\star$ has rank of $4$.
 
 
-  Case $\ell_1$-norm    |   Case $\ell_{1,2}$-norm  |   Nuclear norm          
-:-------------------------:|:-------------------------:|:-------------------------:
-![ ](codes/results/admm-bp-thetak-l1-bp-1.png)  | ![ ](codes/results/admm-bp-thetak-l12-bp-1.png) | ![ ](codes/results/admm-bp-thetak-lnuclear-bp-1.png) 
-![ ](codes/results/admm-bp-dk-l1-bp-1.png)  | ![ ](codes/results/admm-bp-dk-l12-bp-1.png) | ![ ](codes/results/admm-bp-dk-lnuclear-bp-1.png) 
+| Case $\ell_1$-norm  | Case $\ell_{1,2}$-norm  | Nuclear norm  |
+|:-:|:-:|:-:|
+| ![ ](codes/results/admm-bp-thetak-l1-bp-1.png)  | ![ ](codes/results/admm-bp-thetak-l12-bp-1.png)  | ![ ](codes/results/admm-bp-thetak-lnuclear-bp-1.png)  |
+| ![ ](codes/results/admm-bp-dk-l1-bp-1.png)  | ![ ](codes/results/admm-bp-dk-l12-bp-1.png)  | ![ ](codes/results/admm-bp-dk-lnuclear-bp-1.png)  |
+  
 
 
 ## LASSO 
@@ -83,11 +83,11 @@ $$
 $$
 where $K \in \mathbb{R}^{m\times n} ,~ m < n$ is a random Gaussian matrix. 
 
+| covtype  | ijcnn1  | phishing  |
+|:-:|:-:|:-:|
+| ![ ](codes/results/admm-lasso-covtype-tk-1.png)  | ![ ](codes/results/admm-lasso-ijcnn1-tk-1.png)  | ![ ](codes/results/admm-lasso-phishing-tk-1.png) |
+| ![ ](codes/results/admm-lasso-covtype-1.png)  | ![ ](codes/results/admm-lasso-ijcnn1-1.png)  | ![ ](codes/results/admm-lasso-phishing-1.png)  |
 
-  covtype    |   ijcnn1  |   phishing          
-:-------------------------:|:-------------------------:|:-------------------------:
-![ ](codes/results/admm-lasso-covtype-tk-1.png)  | ![ ](codes/results/admm-lasso-ijcnn1-tk-1.png) | ![ ](codes/results/admm-lasso-phishing-tk-1.png) 
-![ ](codes/results/admm-lasso-covtype-1.png)  | ![ ](codes/results/admm-lasso-ijcnn1-1.png) | ![ ](codes/results/admm-lasso-phishing-1.png) 
 
 
 
@@ -108,19 +108,19 @@ $$
 which does not admit closed form solution. In the implementation, finite-step FISTA is applied to roughly solve the above problem. 
 
 
-  Angle $\theta_k$    |   Error $\|x_k-x^\star\|$  |   PSNR          
-:-------------------------:|:-------------------------:|:-------------------------:
-![ ](codes/results/admm-inp-thetak-cameraman-1.png)  | ![ ](codes/results/admm-inp-dk-cameraman-1.png) | ![ ](codes/results/admm-inp-psnr-cameraman-1.png) 
+|  Angle $\theta_k$    |   Error $\|x_k-x^\star\|$  |   PSNR   |       
+|:-:|:-:|:-:|
+| ![ ](codes/results/admm-inp-thetak-cameraman-1.png)  | ![ ](codes/results/admm-inp-dk-cameraman-1.png) | ![ ](codes/results/admm-inp-psnr-cameraman-1.png)  |
 
 
 
-Image quality comparision at iteration step $k=30$
+Image quality comparison at iteration step $k=30$
 
-  Angle $\theta_k$    |   ADMM, PSNR = 26.6935  |   iADMM, PSNR = 26.3203          
-:-------------------------:|:-------------------------:|:-------------------------:
-![ ](codes/results/cameraman-original-img-1.png)  | ![ ](codes/results/step-30-ADMM-1.png) | ![ ](codes/results/step-30-iADMM-1.png) 
-  Angle $\theta_k$    |   A3DMM, $s=100$ PSNR = 27.1668  |   A3DMM, $s=+\infty$ PSNR = 27.1667   
-![ ](codes/results/cameraman-corrupted-img-1.png)  | ![ ](codes/results/step-30-sADMM-1.png) | ![ ](codes/results/step-30-infADMM-1.png) 
+|  Original image    |   ADMM, PSNR = 26.6935  |   iADMM, PSNR = 26.3203  |        
+|:-:|:-:|:-:|
+|![ ](codes/results/cameraman-original-img-1.png)  | ![ ](codes/results/step-30-ADMM-1.png) | ![ ](codes/results/step-30-iADMM-1.png)  |
+|  Corrupted image    |   A3DMM, $s=100$ PSNR = 27.1668  |   A3DMM, $s=+\infty$ PSNR = 27.1667   |
+| ![ ](codes/results/cameraman-corrupted-img-1.png)  | ![ ](codes/results/step-30-sADMM-1.png) | ![ ](codes/results/step-30-infADMM-1.png)  |
 
 
 Copyright (c) 2019 Clarice Poon and Jingwei Liang
