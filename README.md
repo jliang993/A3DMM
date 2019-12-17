@@ -9,10 +9,10 @@ Matlab code to reproduce the results of the paper
 ## ADMM
 
 Consider the following constrained and composite optimisation problem
-$$
+\\[
 \min_{x \in \mathbb{R}^n , y\in \mathbb{R}^m } ~ R(x) + J(y)  \quad
 \textrm{such~that} \quad Ax + By = b  ,
-$$
+\\]
 where the following basic assumptions are imposed
 * $R, J$ are proper convex and lower semi-continuous functions.
 
