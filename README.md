@@ -1,9 +1,9 @@
 # A3DMM - Adaptive Acceleration for ADMM
 Matlab code to reproduce the results of the paper
 
-[Trajectory of Alternating Direction Method of Multipliers and Adaptive Acceleration](https://jliang993.github.io/files/conference/nips19.pdf)
+[Trajectory of Alternating Direction Method of Multipliers and Adaptive Acceleration](https://jliang993.github.io/assets/files/conference/nips19.pdf)
 
-[Clarice Poon](http://www.damtp.cam.ac.uk/user/cmhsp2/), [Jingwei Liang](https://jliang993.github.io/), 2019
+[Clarice Poon](https://cmhsp2.github.io/), [Jingwei Liang](https://jliang993.github.io/), 2019
 
 
 ## ADMM
